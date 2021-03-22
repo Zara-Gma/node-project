@@ -51,10 +51,24 @@ Having everything prepared for the application, you finally:
 Steps: 
 Right-click tgz to copy the path 
 Copy ipv4
--  scp bootcamp-node-project-1.0.0.tgz root@111.111.111.1:/root
-
+1.  Copy the tar file and package.json
+scp /Users/private/Documents/GitHub/node-project/package.json root@111.111.111.5:/root
 
 # EXERCISE 5: Run Node App
 
     Start the node application in detached mode (npm install and node server.js commands)
-    
+  
+1. Unpack the application:
+tar -zxvf bootcamp-node-project-1.0.0.tgz:/root
+2. npm install
+3. Run the application
+node server.js
+
+# EXERCISE 6: Access from browser - configure firewall
+
+You see that the application is not accessible through the browser, because all ports are closed on the server. So you:
+
+    Open the correct port on Droplet
+    and access the UI from browser
+
+1. In this case add 3000 as the port number.
